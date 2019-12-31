@@ -6,11 +6,11 @@ myProblem
 ├── input  
 │   ├── input0.txt  
 │   ├── input1.txt  
-│   ├── inputs get generated but not added to github unless it's a specific case  
+│   └── inputs get generated but not added to github unless it's a specific case  
 ├── input generator script  
 ├── output  
 │   ├── output0.txt  
-│   ├── output1.txt  
+│   └── output1.txt  
 ├── readme.md  
 ├── solutions  
 │   └── solution1  
