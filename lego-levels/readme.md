@@ -28,7 +28,7 @@ Print the minimum number of legos needed to create a length $n$ row of legos. If
 ## Sample Input 1
 
 ```
-16
+16 3
 1 3 5
 ```
 

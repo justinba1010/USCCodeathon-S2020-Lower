@@ -14,7 +14,7 @@ pushd $SCRIPT_DIR
     echo $i
   done
 
-  for i in 0 33 34 35
+  for i in 0 {29..35}
   do
     echo $i
     python3 ./solutions/solution1.py < input/input$i.txt > output/output$i.txt
