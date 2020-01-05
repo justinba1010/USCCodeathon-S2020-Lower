@@ -9,7 +9,7 @@ public class CommentingGenerator
 
 		Random rand = new Random();
 
-		int blockCommentCount = rand.nextInt(20);
+		int blockCommentCount = rand.nextInt(20) + 20;
 
 		for (int i = 0; i < blockCommentCount; i++)
 		{
