@@ -23,6 +23,13 @@ dr x y where dr stands for down and to the right, and x and y indicate the start
 sd a where s stands for shift-down and a is the amount to shift down. This is the only case when Tommy uses scissors and shifts each row on the paper down by $a$. The row at the bottom is moved to the top
 
 ## Constraints
+$5 \leq n \leq 1000$
+$1 \leq c \leq 100$
+
+In all instructions:
+$0 \leq x,y < n$
+
+$0 \leq a \leq n * 20$
 
 ## Output
 Print what the paper looks like after all of the hole punching methods have been done. The paper starts as all 0's, and any time a hole punch is made on a cell, it changes to a 1. If a cell is already a 1 and is it hole punched again, it does not change.
