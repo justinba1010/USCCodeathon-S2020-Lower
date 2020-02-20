@@ -9,8 +9,8 @@ public class perimGen
 		// TODO Auto-generated method stub
 		Random rand = new Random();
 
-		int xDim = rand.nextInt(30) + 30;
-		int yDim = rand.nextInt(30) + 30;
+		int xDim = rand.nextInt(30) + 36;
+		int yDim = rand.nextInt(15) + 25;
 
 //		System.out.println("yDim" + yDim);
 //		System.out.println("xDim" + xDim);
@@ -59,15 +59,18 @@ public class perimGen
 					break;
 				}
 			}
-			for (int i = 0; i < 3; i++)
+			int sideFenceHeight = rand.nextInt(4) + 2;
+			for (int i = 0; i < sideFenceHeight; i++)
 			{
 				if(currY + 1 < board.length)
 				{
 					currY += 1;
 					board[currY][currX] = "#";
 				}
+				if(currY == board.length - 2 || currY == board.length - 1)
+					break;
 			}
-			if(currY == board.length - 1)
+			if(currY == board.length - 2 || currY == board.length - 1)
 				break;
 			for (int j = 0; j < outwardMovement; j++)
 			{
@@ -120,12 +123,20 @@ public class perimGen
 					break;
 				}
 			}
-			for (int i = 0; i < 3; i++)
+			int sideFenceHeight = rand.nextInt(4) + 2;
+			for (int i = 0; i < sideFenceHeight; i++)
 			{
 				if(currY - 1 >= 0)
 				{
 					currY -= 1;
 					board[currY][currX] = "#";
+				}
+				if(currY == 1)
+				{
+					currY -= 1;
+					board[currY][currX] = "#";
+
+					break;
 				}
 			}
 			if(currY == 0)
@@ -157,6 +168,10 @@ public class perimGen
 		{
 			holeX = rand.nextInt(4) + 3;
 			holeY = rand.nextInt(4) + 3;
+			if(y + holeY >= board.length - 2)
+			{
+				continue;
+			}
 			for (int i = 0; i < holeY; i++)
 			{
 				for (int j = 0; j < holeX; j++)
@@ -181,7 +196,7 @@ public class perimGen
 		for (int i = 0; i < board.length; i++)
 		{
 			int x = 0;
-			while (board[i][x].equals("#") == false)
+			while (x < board[i].length && board[i][x].equals("#") == false)
 			{
 				board[i][x] = " ";
 				x++;
@@ -191,7 +206,7 @@ public class perimGen
 		for (int i = 0; i < board.length; i++)
 		{
 			int x = board[0].length - 1;
-			while (board[i][x].equals("#") == false)
+			while (x > 0 && board[i][x].equals("#") == false)
 			{
 				board[i][x] = " ";
 				x--;
