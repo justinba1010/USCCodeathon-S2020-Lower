@@ -3,9 +3,11 @@ import sys
 # Not C friendly
 
 isFence = []
-for line in sys.stdin:
+n = int(input())
+c = int(input())
+for _ in range(n):
     # Turn isFence into True for fence.
-    isFence.append(list(map(lambda x: x == '#', line.strip('\n'))))
+    isFence.append(list(map(lambda x: x == '#', input().strip('\n'))))
 # seed is always 1,1
 queue = [(1,1)]
 visited = [list(map(lambda x: False, line)) for line in isFence]
