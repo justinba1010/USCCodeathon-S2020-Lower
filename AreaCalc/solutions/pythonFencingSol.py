@@ -1,5 +1,7 @@
 board = []
 lineCounter = 0
+yDim = int(input())
+xDim = int(input())
 curLine = input()
 try:
     while curLine != '':

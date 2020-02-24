@@ -17,6 +17,10 @@ public class PerimeterSolution
 		int lineTotal = 0;
 		String fillCharacter = " ";
 
+		int yDim = inputScanner.nextInt();
+		int xDim = inputScanner.nextInt();
+		inputScanner.nextLine();
+
 		while (inputScanner.hasNextLine())
 		{
 			boolean isInOpen = false;
@@ -30,10 +34,10 @@ public class PerimeterSolution
 				break;
 			for (int i = 0; i < currentLine.length() - 1; i++)
 			{
-				if(currentLine.substring(i, i + 1).equals("#"))
-				{
-
-				}
+//				if(currentLine.substring(i, i + 1).equals("#"))
+//				{
+//
+//				}
 				if(isInOpen && currentLine.substring(i, i + 1).equals(fillCharacter))
 				{
 					lineTotal += 1;
@@ -61,6 +65,7 @@ public class PerimeterSolution
 
 		}
 		System.out.println(totalArea);
+		inputScanner.close();
 
 	}
 
